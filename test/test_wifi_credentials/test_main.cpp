@@ -29,8 +29,7 @@ static void test_ssid_length_limit() {
 }
 
 static void test_password_length_limits() {
-  TEST_ASSERT_TRUE(validateCredentials({"home", "1234567"}) ==
-                   CredentialsError::kPasswordTooShort);
+  TEST_ASSERT_TRUE(validateCredentials({"home", "1234567"}) == CredentialsError::kPasswordTooShort);
   TEST_ASSERT_TRUE(validateCredentials({"home", std::string(63, 'p')}) == CredentialsError::kNone);
   TEST_ASSERT_TRUE(validateCredentials({"home", std::string(64, 'p')}) ==
                    CredentialsError::kPasswordTooLong);

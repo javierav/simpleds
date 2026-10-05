@@ -5,8 +5,8 @@
 namespace simpleds::services {
 
 std::string networksToJson(const std::vector<core::ScannedNetwork>& networks, bool scanning) {
-  std::string json = std::string("{\"scanning\":") + (scanning ? "true" : "false") +
-                     ",\"networks\":[";
+  std::string json =
+      std::string("{\"scanning\":") + (scanning ? "true" : "false") + ",\"networks\":[";
   for (size_t i = 0; i < networks.size(); ++i) {
     const auto& network = networks[i];
     if (i > 0) json += ',';

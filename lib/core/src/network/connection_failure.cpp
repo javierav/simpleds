@@ -15,12 +15,9 @@ ConnectionFailure classifyDisconnectReason(uint8_t reason) {
   switch (reason) {
     case kReason4WayHandshakeTimeout:
     case kReasonAuthFail:
-    case kReasonHandshakeTimeout:
-      return ConnectionFailure::kWrongPassword;
-    case kReasonNoApFound:
-      return ConnectionFailure::kNetworkNotFound;
-    default:
-      return ConnectionFailure::kOther;
+    case kReasonHandshakeTimeout: return ConnectionFailure::kWrongPassword;
+    case kReasonNoApFound: return ConnectionFailure::kNetworkNotFound;
+    default: return ConnectionFailure::kOther;
   }
 }
 

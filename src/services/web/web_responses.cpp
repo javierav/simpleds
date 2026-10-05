@@ -10,8 +10,7 @@ bool sendWebAsset(WebServer& server, const char* path) {
 
   server.sendHeader("Content-Encoding", "gzip");
   server.sendHeader("Cache-Control", "no-cache");
-  server.send_P(200, asset->contentType, reinterpret_cast<const char*>(asset->data),
-                asset->size);
+  server.send_P(200, asset->contentType, reinterpret_cast<const char*>(asset->data), asset->size);
   return true;
 }
 

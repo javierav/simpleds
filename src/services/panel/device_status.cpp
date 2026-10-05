@@ -24,11 +24,11 @@ DeviceStatus readDeviceStatus() {
 std::string deviceStatusToJson(const DeviceStatus& status) {
   return "{\"firmware\":\"" + core::escapeJson(status.firmwareVersion) + "\",\"hostname\":\"" +
          core::escapeJson(status.hostname) + "\",\"ssid\":\"" + core::escapeJson(status.ssid) +
-         "\",\"ip\":\"" + core::escapeJson(status.ip) + "\",\"rssi\":" +
-         std::to_string(status.rssi) + ",\"bars\":" +
-         std::to_string(core::signalBars(status.rssi)) + ",\"uptime\":" +
-         std::to_string(status.uptimeS) + ",\"freeHeap\":" + std::to_string(status.freeHeapBytes) +
-         "}";
+         "\",\"ip\":\"" + core::escapeJson(status.ip) +
+         "\",\"rssi\":" + std::to_string(status.rssi) +
+         ",\"bars\":" + std::to_string(core::signalBars(status.rssi)) +
+         ",\"uptime\":" + std::to_string(status.uptimeS) +
+         ",\"freeHeap\":" + std::to_string(status.freeHeapBytes) + "}";
 }
 
 }  // namespace simpleds::services

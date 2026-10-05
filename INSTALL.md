@@ -19,8 +19,10 @@ instrucciones de su web.
 ### 2. PlatformIO
 
 ```bash
-brew install platformio
+brew install platformio clang-format
 ```
+
+`clang-format` formatea el código C++ según `.clang-format`.
 
 Verifica:
 
@@ -61,7 +63,7 @@ equivalentes.
 
 ```bash
 sudo apt update
-sudo apt install -y python3 python3-venv build-essential git curl
+sudo apt install -y python3 python3-venv build-essential git curl clang-format
 ```
 
 ### 2. PlatformIO
@@ -142,3 +144,11 @@ pio device monitor
 
 Si la subida no arranca sola, mantén pulsado el botón **BOOT** de la placa
 mientras empieza el flasheo.
+
+## Formatear el código
+
+Antes de hacer commit, desde la raíz del repositorio:
+
+```bash
+clang-format -i $(git ls-files '*.cpp' '*.h' | grep -v generated)
+```

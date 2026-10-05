@@ -15,8 +15,14 @@ constexpr const char* kIndexPath = "/portal/index.html";
 // Connectivity checks made by Android, iOS/macOS and Windows on joining a
 // network. Registering them avoids "handler not found" errors in the log.
 constexpr const char* kConnectivityCheckPaths[] = {
-    "/generate_204", "/gen_204",    "/hotspot-detect.html", "/library/test/success.html",
-    "/connecttest.txt", "/ncsi.txt", "/redirect",           "/canonical.html",
+    "/generate_204",
+    "/gen_204",
+    "/hotspot-detect.html",
+    "/library/test/success.html",
+    "/connecttest.txt",
+    "/ncsi.txt",
+    "/redirect",
+    "/canonical.html",
     "/success.txt",
 };
 }  // namespace

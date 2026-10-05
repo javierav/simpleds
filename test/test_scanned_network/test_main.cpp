@@ -10,7 +10,8 @@ void setUp() {}
 void tearDown() {}
 
 static void test_sorts_by_signal_strength() {
-  const auto list = prepareNetworkList({{"weak", -80, true}, {"strong", -40, true}, {"mid", -60, false}});
+  const auto list =
+      prepareNetworkList({{"weak", -80, true}, {"strong", -40, true}, {"mid", -60, false}});
   TEST_ASSERT_EQUAL(3, list.size());
   TEST_ASSERT_EQUAL_STRING("strong", list[0].ssid.c_str());
   TEST_ASSERT_EQUAL_STRING("mid", list[1].ssid.c_str());

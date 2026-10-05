@@ -32,9 +32,9 @@ bool WifiCredentialsStore::save(const core::WifiCredentials& credentials) {
   Preferences prefs;
   if (!prefs.begin(kNamespace, false)) return false;
 
-  const bool ok = prefs.putString(kSsidKey, credentials.ssid.c_str()) > 0 &&
-                  prefs.putString(kPasswordKey, credentials.password.c_str()) ==
-                      credentials.password.size();
+  const bool ok =
+      prefs.putString(kSsidKey, credentials.ssid.c_str()) > 0 &&
+      prefs.putString(kPasswordKey, credentials.password.c_str()) == credentials.password.size();
   prefs.end();
   return ok;
 }
