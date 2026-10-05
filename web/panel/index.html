@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SimpleDS</title>
+    <link rel="stylesheet" href="/common/style.css" />
+    <script src="/panel/panel.js" defer></script>
+  </head>
+  <body>
+    <h1>SimpleDS</h1>
+    <p id="error" class="error" hidden>No se puede contactar con el dispositivo.</p>
+
+    <section class="card">
+      <h2>Estado</h2>
+      <dl>
+        <dt>Red WiFi</dt>
+        <dd id="ssid">—</dd>
+        <dt>Señal</dt>
+        <dd id="signal">—</dd>
+        <dt>Dirección</dt>
+        <dd id="address">—</dd>
+        <dt>Encendido desde hace</dt>
+        <dd id="uptime">—</dd>
+        <dt>Memoria libre</dt>
+        <dd id="heap">—</dd>
+        <dt>Firmware</dt>
+        <dd id="firmware">—</dd>
+      </dl>
+    </section>
+  </body>
+</html>

@@ -27,6 +27,7 @@ void WifiManager::begin() {
 void WifiManager::update() {
   if (mode_ == Mode::kStation) {
     station_.update();
+    if (station_.isConnected()) mdns_.begin(config::kHostname);
   } else {
     portal_.update();
   }

@@ -19,6 +19,10 @@ void WifiStation::update() {
   if (connected != connected_) {
     connected_ = connected;
     if (connected) {
+      // A link-local IPv6 address lets mDNS answer AAAA queries; otherwise
+      // macOS waits ~5 s for them before using the IPv4 address. It can only
+      // be created once the interface is up.
+      WiFi.enableIpV6();
       log_i("Connected to '%s', IP %s, RSSI %d dBm", credentials_.ssid.c_str(),
             WiFi.localIP().toString().c_str(), WiFi.RSSI());
     } else {

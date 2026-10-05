@@ -3,6 +3,7 @@
 #include "services/provisioning/captive_portal.h"
 #include "services/storage/wifi_credentials_store.h"
 #include "services/system/restart_scheduler.h"
+#include "services/wifi/mdns_responder.h"
 #include "services/wifi/wifi_station.h"
 
 namespace simpleds::services {
@@ -26,6 +27,7 @@ class WifiManager {
   WifiCredentialsStore& store_;
   RestartScheduler& restart_;
   WifiStation station_;
+  MdnsResponder mdns_;
   CaptivePortal portal_;
   Mode mode_ = Mode::kProvisioning;
 };

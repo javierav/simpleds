@@ -12,11 +12,13 @@ void App::begin() {
 
   resetButton_.begin();
   wifi_.begin();
+  if (wifi_.mode() == services::WifiManager::Mode::kStation) panel_.begin();
 }
 
 void App::update() {
   if (resetButton_.update()) wifi_.forgetNetwork();
   wifi_.update();
+  panel_.update();
   restart_.update();
 }
 

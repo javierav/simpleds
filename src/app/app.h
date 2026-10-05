@@ -3,6 +3,7 @@
 #include "config/network_defaults.h"
 #include "config/pins.h"
 #include "drivers/input/reset_button.h"
+#include "services/panel/control_panel.h"
 #include "services/storage/wifi_credentials_store.h"
 #include "services/system/restart_scheduler.h"
 #include "services/wifi/wifi_manager.h"
@@ -20,6 +21,7 @@ class App {
   services::RestartScheduler restart_;
   services::WifiCredentialsStore wifiStore_;
   services::WifiManager wifi_{wifiStore_, restart_};
+  services::ControlPanel panel_;
   drivers::ResetButton resetButton_{config::kResetButtonPin, config::kWifiResetHoldMs};
 };
 
