@@ -1,0 +1,10 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Secretos locales (nunca al repositorio)
+src/config/secrets.h
+
+# Sistema
+.DS_Store

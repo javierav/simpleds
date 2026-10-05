@@ -1,0 +1,7 @@
+{
+  "name": "core",
+  "version": "0.1.0",
+  "description": "Portable SimpleDS domain logic. Must not depend on Arduino or ESP-IDF.",
+  "frameworks": "*",
+  "platforms": "*"
+}
