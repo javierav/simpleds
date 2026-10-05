@@ -52,6 +52,8 @@ introduce.
 | 2026-10-05 | **Configuración en dos niveles**: valores por defecto en compilación (`src/config/`) y ajustes de usuario en NVS (`Preferences`) | Separar valores de fábrica de ajustes persistentes. |
 | 2026-10-05 | **Sin secretos en el repositorio**; `src/config/secrets.h` está en `.gitignore` | Evitar fugas de credenciales. |
 | 2026-10-05 | **Idiomas**: documentación (`*.md`) en español; código, comentarios, ficheros de configuración y commits en inglés | Convención habitual del ecosistema; documentación en el idioma del equipo. |
+| 2026-10-05 | **Conectividad con las librerías del core** (`WiFi`, `WebServer`, `DNSServer`, `Preferences`), sin librerías de terceros como WiFiManager | Sin dependencias externas, control del bucle no bloqueante y reutilización del servidor web para el futuro panel. |
+| 2026-10-05 | **Textos de la interfaz web en español** | Idioma de los usuarios; los identificadores y comentarios siguen en inglés. |
 | 2026-10-05 | **Versionado SemVer** (`config::kFirmwareVersion`) y **Conventional Commits** | Estándares de la comunidad. |
 
 ## Commits
@@ -109,4 +111,6 @@ introduce.
 ## Hardware
 
 - MCU: ESP32-WROOM-32U, placa genérica `esp32dev` en PlatformIO.
-- La asignación de pines se centraliza en `src/config/` (pendiente de definir).
+- La asignación de pines se centraliza en `src/config/pins.h`.
+- Botón BOOT (GPIO0): pulsación larga para olvidar la red WiFi. No debe estar
+  pulsado al arrancar, porque entra en modo de descarga.
