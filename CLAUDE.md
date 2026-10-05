@@ -51,7 +51,7 @@ introduce.
 | 2026-10-05 | **Fail-safe**: ante fallo o dato inválido, la salida de potencia pasa a 0 | Se controlan cargas de 230 V; el estado seguro es "apagado". |
 | 2026-10-05 | **Configuración en dos niveles**: valores por defecto en compilación (`src/config/`) y ajustes de usuario en NVS (`Preferences`) | Separar valores de fábrica de ajustes persistentes. |
 | 2026-10-05 | **Sin secretos en el repositorio**; `src/config/secrets.h` está en `.gitignore` | Evitar fugas de credenciales. |
-| 2026-10-05 | **Código en inglés, documentación en español** | Convención habitual del ecosistema; documentación en el idioma del equipo. |
+| 2026-10-05 | **Idiomas**: documentación (`*.md`) en español; código, comentarios, ficheros de configuración y commits en inglés | Convención habitual del ecosistema; documentación en el idioma del equipo. |
 | 2026-10-05 | **Versionado SemVer** (`config::kFirmwareVersion`) y **Conventional Commits** | Estándares de la comunidad. |
 
 ## Commits

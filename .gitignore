@@ -3,8 +3,8 @@
 .pioenvs/
 .piolibdeps/
 
-# Secretos locales (nunca al repositorio)
+# Local secrets (never commit)
 src/config/secrets.h
 
-# Sistema
+# OS
 .DS_Store
