@@ -19,6 +19,7 @@ class WifiManager {
   void begin();
   void update();
   Mode mode() const { return mode_; }
+  bool isConnected() const { return mode_ == Mode::kStation && station_.isConnected(); }
 
   // Erases the stored network and restarts into provisioning mode.
   void forgetNetwork();

@@ -4,11 +4,26 @@ Firmware para un **derivador de excedentes solares** basado en un **ESP32-U**
 (ESP32-WROOM-32U, con antena externa U.FL), escrito en C++ sobre el framework
 Arduino y compilado con PlatformIO.
 
-Un derivador mide la potencia que la instalación intercambia con la red y,
-cuando hay excedente fotovoltaico, lo desvía a una carga resistiva (termo
-eléctrico, radiador…) en lugar de verterlo a la red.
+Un derivador desvía el excedente fotovoltaico a una carga resistiva (termo
+eléctrico, radiador…) en lugar de verterlo a la red. SimpleDS es un derivador
+**simple**: no se conecta al inversor ni decide cuándo derivar. Un controlador
+externo (Home Assistant, Node-RED…) le envía por MQTT el porcentaje de potencia
+y SimpleDS lo aplica con un SSR de paso por cero.
 
-> **Estado:** en fase inicial. Aún no es funcional.
+> **Estado:** en desarrollo, pendiente de validar en hardware real.
+
+## Funciones
+
+- Control de potencia por ciclos completos de red (0–100 %) sobre un SSR de
+  paso por cero.
+- Protección térmica del SSR con sonda DS18B20 y modo de emergencia.
+- Ventilador de refrigeración automático.
+- Sonda DS18B20 en el termo, publicada periódicamente por MQTT.
+- Configuración WiFi por portal cautivo y panel web en `http://simpleds.local`
+  con contraseña opcional.
+
+Contrato MQTT y reglas de funcionamiento en [BUSINESS.md](BUSINESS.md);
+esquema de conexiones en [ARCHITECTURE.md](ARCHITECTURE.md#montaje-del-hardware).
 
 ## ⚠️ Aviso de seguridad
 
@@ -41,6 +56,7 @@ pio test -e native          # tests unitarios en el ordenador
 ├── src/          Código dependiente de Arduino/ESP32 (app, drivers, servicios)
 ├── lib/core/     Lógica de dominio portable, sin dependencias de hardware
 ├── web/          Interfaz web (se incrusta en el firmware al compilar)
+├── docs/         Diagramas (esquema de conexiones)
 ├── scripts/      Scripts de compilación
 ├── test/         Tests unitarios (Unity) que se ejecutan en el ordenador
 └── platformio.ini
@@ -53,9 +69,9 @@ El detalle está en [ARCHITECTURE.md](ARCHITECTURE.md).
 | Documento                            | Contenido                                        |
 | ------------------------------------ | ------------------------------------------------ |
 | [INSTALL.md](INSTALL.md)             | Preparación del entorno en macOS y Linux          |
-| [ARCHITECTURE.md](ARCHITECTURE.md)   | Arquitectura, capas, módulos y decisiones de diseño |
+| [ARCHITECTURE.md](ARCHITECTURE.md)   | Arquitectura, módulos, montaje del hardware y decisiones de diseño |
 | [CLAUDE.md](CLAUDE.md)               | Convenciones, stack y decisiones técnicas         |
-| `BUSINESS.md`                        | Reglas y decisiones de negocio (cuando existan)  |
+| [BUSINESS.md](BUSINESS.md)           | Contrato MQTT, reglas de funcionamiento y ajustes |
 
 ## Contribuir
 

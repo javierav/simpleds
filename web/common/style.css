@@ -109,3 +109,57 @@ dd {
   text-align: right;
   overflow-wrap: anywhere;
 }
+
+input[type="number"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.ok {
+  background: #e6f4ea;
+  color: #1e6b34;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 12px;
+}
+
+.hint {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.state-active {
+  color: #1e6b34;
+  font-weight: 600;
+}
+
+.state-emergency {
+  color: #9b1c1c;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #777;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 20px 0 0;
+}

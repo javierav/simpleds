@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 1080" width="1520" height="1080" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker><marker id="air" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b8fd1"/></marker></defs>
+<rect width="1520" height="1080" fill="#ffffff"/>
+<text x="30" y="38" font-size="22" text-anchor="start" fill="#222" font-weight="bold" >SimpleDS — esquema de conexiones</text>
+<text x="30" y="60" font-size="13" text-anchor="start" fill="#555" font-weight="normal" >ESP32-WROOM-32U · SSR GEYA 40DA (paso por cero) · 2 × DS18B20 · ventilador 5 V</text>
+<rect x="30" y="80" width="120" height="110" rx="8" fill="#fbeee0" stroke="#b07a45" stroke-width="2"/>
+<text x="90" y="128" font-size="14" text-anchor="middle" fill="#222" font-weight="bold" >Red</text>
+<text x="90" y="146" font-size="12" text-anchor="middle" fill="#222" font-weight="normal" >230 V AC</text>
+<text x="138" y="104" font-size="11" text-anchor="end" fill="#222" font-weight="bold" >L</text>
+<text x="138" y="139" font-size="11" text-anchor="end" fill="#222" font-weight="bold" >N</text>
+<text x="138" y="174" font-size="11" text-anchor="end" fill="#222" font-weight="bold" >PE</text>
+<rect x="200" y="85" width="70" height="65" rx="5" fill="#f2f2f2" stroke="#666" stroke-width="2"/>
+<path d="M206,100 L220,100 L248,88 M252,100 L264,100" stroke="#444" stroke-width="2" fill="none"/>
+<path d="M206,135 L220,135 L248,123 M252,135 L264,135" stroke="#444" stroke-width="2" fill="none"/>
+<path d="M234,94 L234,141" stroke="#999" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="235" y="166" font-size="11" text-anchor="middle" fill="#222" font-weight="normal" >Magnetotérmico</text>
+<text x="235" y="179" font-size="11" text-anchor="middle" fill="#222" font-weight="normal" >2P 16 A</text>
+<path d="M150,100 L206,100" stroke="#8b4513" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M264,100 L1150,100 L1150,140" stroke="#8b4513" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M1270,140 L1270,88 L1490,88 L1490,880 L1410,880 L1410,860" stroke="#8b4513" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M150,135 L206,135" stroke="#1f5fbf" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M264,135 L310,135 L310,920 L1330,920 L1330,860" stroke="#1f5fbf" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M150,170 L180,170 L180,945 L1370,945 L1370,860" stroke="#2e8b3a" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M150,170 L180,170 L180,945 L1370,945 L1370,860" stroke="#f2d200" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 8"/>
+<path d="M380,100 L380,170" stroke="#8b4513" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="372" y="118" width="16" height="28" rx="3" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="394" y="136" font-size="10" text-anchor="start" fill="#222" font-weight="normal" >F 0,5 A</text>
+<circle cx="380" cy="100" r="4.5" fill="#8b4513"/>
+<path d="M310,215 L340,215" stroke="#1f5fbf" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="310" cy="215" r="4.5" fill="#1f5fbf"/>
+<rect x="340" y="170" width="140" height="90" rx="6" fill="#2b2b2b" stroke="#111" stroke-width="2"/>
+<text x="400" y="203" font-size="13" text-anchor="middle" fill="#fff" font-weight="bold" >Fuente 5 V</text>
+<text x="400" y="220" font-size="10" text-anchor="middle" fill="#ddd" font-weight="normal" >HLK-PM01 o similar</text>
+<text x="400" y="234" font-size="10" text-anchor="middle" fill="#ddd" font-weight="normal" >5 V DC · ≥ 1 A</text>
+<text x="474" y="199" font-size="9" text-anchor="end" fill="#ffb3b3" font-weight="normal" >+5V</text>
+<text x="474" y="239" font-size="9" text-anchor="end" fill="#ddd" font-weight="normal" >GND</text>
+<path d="M480,195 L885,195 L885,340" stroke="#d62728" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M520,195 L520,430 L560,430" stroke="#d62728" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="520" cy="195" r="4.5" fill="#d62728"/>
+<path d="M480,235 L500,235 L500,470 L560,470" stroke="#222222" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="560" y="290" width="200" height="390" rx="8" fill="#1d3557" stroke="#0d1b2a" stroke-width="2"/>
+<rect x="585" y="305" width="110" height="80" rx="3" fill="#b8bec6" stroke="#6c757d" stroke-width="1.5"/>
+<text x="640" y="340" font-size="11" text-anchor="middle" fill="#222" font-weight="bold" >ESP32-</text>
+<text x="640" y="354" font-size="11" text-anchor="middle" fill="#222" font-weight="bold" >WROOM-32U</text>
+<circle cx="684" cy="314" r="4" fill="#d4af37" stroke="#7a6520"/>
+<path d="M684,314 C700,300 712,290 720,272" stroke="#333" stroke-width="2" fill="none"/>
+<rect x="716" y="215" width="8" height="58" rx="3" fill="#333"/>
+<text x="730" y="240" font-size="10" text-anchor="start" fill="#555" font-weight="normal" >antena externa</text>
+<text x="730" y="252" font-size="10" text-anchor="start" fill="#555" font-weight="normal" >(U.FL)</text>
+<text x="660" y="420" font-size="12" text-anchor="middle" fill="#fff" font-weight="bold" >ESP32 DevKit</text>
+<rect x="640" y="672" width="40" height="18" rx="3" fill="#c0c0c0" stroke="#666"/>
+<text x="660" y="706" font-size="10" text-anchor="middle" fill="#555" font-weight="normal" >USB</text>
+<rect x="556" y="425" width="10" height="10" fill="#d4af37"/>
+<text x="572" y="434" font-size="11" text-anchor="start" fill="#fff" font-weight="normal" >5V</text>
+<rect x="556" y="465" width="10" height="10" fill="#d4af37"/>
+<text x="572" y="474" font-size="11" text-anchor="start" fill="#fff" font-weight="normal" >GND</text>
+<rect x="754" y="355" width="10" height="10" fill="#d4af37"/>
+<text x="749" y="364" font-size="11" text-anchor="end" fill="#fff" font-weight="normal" >GPIO26</text>
+<rect x="754" y="395" width="10" height="10" fill="#d4af37"/>
+<text x="749" y="404" font-size="11" text-anchor="end" fill="#fff" font-weight="normal" >GPIO27</text>
+<rect x="754" y="435" width="10" height="10" fill="#d4af37"/>
+<text x="749" y="444" font-size="11" text-anchor="end" fill="#fff" font-weight="normal" >GND</text>
+<rect x="754" y="515" width="10" height="10" fill="#d4af37"/>
+<text x="749" y="524" font-size="11" text-anchor="end" fill="#fff" font-weight="normal" >GPIO32</text>
+<rect x="754" y="595" width="10" height="10" fill="#d4af37"/>
+<text x="749" y="604" font-size="11" text-anchor="end" fill="#fff" font-weight="normal" >GPIO33</text>
+<rect x="754" y="635" width="10" height="10" fill="#d4af37"/>
+<text x="749" y="644" font-size="11" text-anchor="end" fill="#fff" font-weight="normal" >3V3</text>
+<rect x="850" y="340" width="220" height="140" rx="6" fill="#2d6a4f" stroke="#1b4332" stroke-width="2"/>
+<text x="960" y="418" font-size="13" text-anchor="middle" fill="#fff" font-weight="bold" >Placa de mando</text>
+<text x="960" y="435" font-size="10" text-anchor="middle" fill="#d8f3dc" font-weight="normal" >2 × NPN (ver detalle)</text>
+<text x="885" y="360" font-size="9" text-anchor="middle" fill="#d8f3dc" font-weight="normal" >+5V</text>
+<text x="920" y="360" font-size="9" text-anchor="middle" fill="#d8f3dc" font-weight="normal" >S+</text>
+<text x="960" y="360" font-size="9" text-anchor="middle" fill="#d8f3dc" font-weight="normal" >S−</text>
+<text x="1010" y="360" font-size="9" text-anchor="middle" fill="#d8f3dc" font-weight="normal" >V+</text>
+<text x="1050" y="360" font-size="9" text-anchor="middle" fill="#d8f3dc" font-weight="normal" >V−</text>
+<text x="858" y="364" font-size="9" text-anchor="start" fill="#d8f3dc" font-weight="normal" >IN1</text>
+<text x="858" y="404" font-size="9" text-anchor="start" fill="#d8f3dc" font-weight="normal" >IN2</text>
+<text x="858" y="444" font-size="9" text-anchor="start" fill="#d8f3dc" font-weight="normal" >GND</text>
+<path d="M760,360 L850,360" stroke="#7b3fa0" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M760,400 L850,400" stroke="#138a8a" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M760,440 L850,440" stroke="#222222" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M920,340 L920,285 L1150,285 L1150,240" stroke="#d62728" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M960,340 L960,300 L1270,300 L1270,240" stroke="#7b3fa0" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M1010,340 L1010,315 L1370,315 L1370,240" stroke="#d62728" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M1050,340 L1050,328 L1410,328 L1410,240" stroke="#138a8a" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="885" cy="340" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="920" cy="340" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="960" cy="340" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="1010" cy="340" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="1050" cy="340" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="850" cy="360" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="850" cy="400" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="850" cy="440" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<rect x="1100" y="110" width="220" height="160" rx="4" fill="#9aa3ad" stroke="#5f6770" stroke-width="2"/>
+<line x1="1106" y1="112" x2="1106" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1118" y1="112" x2="1118" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1130" y1="112" x2="1130" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1142" y1="112" x2="1142" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1154" y1="112" x2="1154" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1166" y1="112" x2="1166" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1178" y1="112" x2="1178" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1190" y1="112" x2="1190" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1202" y1="112" x2="1202" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1214" y1="112" x2="1214" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1226" y1="112" x2="1226" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1238" y1="112" x2="1238" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1250" y1="112" x2="1250" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1262" y1="112" x2="1262" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1274" y1="112" x2="1274" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1286" y1="112" x2="1286" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1298" y1="112" x2="1298" y2="268" stroke="#868f99" stroke-width="2"/>
+<line x1="1310" y1="112" x2="1310" y2="268" stroke="#868f99" stroke-width="2"/>
+<text x="1314" y="124" font-size="10" text-anchor="end" fill="#222" font-weight="normal" >disipador</text>
+<rect x="1120" y="130" width="170" height="120" rx="4" fill="#f4f4f4" stroke="#555" stroke-width="2"/>
+<text x="1210" y="176" font-size="13" text-anchor="middle" fill="#222" font-weight="bold" >GEYA SSR-40DA</text>
+<text x="1210" y="192" font-size="10" text-anchor="middle" fill="#555" font-weight="normal" >salida 24–480 V AC, 40 A</text>
+<text x="1210" y="205" font-size="10" text-anchor="middle" fill="#555" font-weight="normal" >control 3–32 V DC</text>
+<circle cx="1210" cy="226" r="4" fill="#e63946"/>
+<text x="1218" y="230" font-size="9" text-anchor="start" fill="#777" font-weight="normal" >LED</text>
+<circle cx="1150" cy="140" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1162" y="144" font-size="11" text-anchor="start" fill="#222" font-weight="bold" >1</text>
+<circle cx="1270" cy="140" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1258" y="144" font-size="11" text-anchor="end" fill="#222" font-weight="bold" >2</text>
+<circle cx="1150" cy="240" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1162" y="244" font-size="11" text-anchor="start" fill="#222" font-weight="bold" >3 +</text>
+<circle cx="1270" cy="240" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1258" y="244" font-size="11" text-anchor="end" fill="#222" font-weight="bold" >4 −</text>
+<rect x="1340" y="140" width="100" height="100" rx="10" fill="#333" stroke="#111" stroke-width="2"/>
+<circle cx="1390" cy="190" r="40" fill="#4a4a4a"/>
+<ellipse cx="1390" cy="172" rx="9" ry="17" fill="#888" transform="rotate(0 1390 190)"/>
+<ellipse cx="1390" cy="172" rx="9" ry="17" fill="#888" transform="rotate(72 1390 190)"/>
+<ellipse cx="1390" cy="172" rx="9" ry="17" fill="#888" transform="rotate(144 1390 190)"/>
+<ellipse cx="1390" cy="172" rx="9" ry="17" fill="#888" transform="rotate(216 1390 190)"/>
+<ellipse cx="1390" cy="172" rx="9" ry="17" fill="#888" transform="rotate(288 1390 190)"/>
+<circle cx="1390" cy="190" r="9" fill="#222" stroke="#999"/>
+<text x="1390" y="132" font-size="12" text-anchor="middle" fill="#222" font-weight="bold" >Ventilador 5 V</text>
+<path d="M1338,165 L1324,165" stroke="#5b8fd1" stroke-width="2.5" marker-end="url(#air)"/>
+<path d="M1338,190 L1324,190" stroke="#5b8fd1" stroke-width="2.5" marker-end="url(#air)"/>
+<path d="M1338,215 L1324,215" stroke="#5b8fd1" stroke-width="2.5" marker-end="url(#air)"/>
+<text x="1350" y="258" font-size="12" text-anchor="middle" fill="#d62728" font-weight="bold" >+</text>
+<text x="1428" y="258" font-size="12" text-anchor="middle" fill="#222222" font-weight="bold" >−</text>
+<circle cx="1370" cy="240" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<circle cx="1410" cy="240" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<rect x="1280" y="430" width="180" height="430" rx="50" fill="#eef3f8" stroke="#8aa0b4" stroke-width="2.5"/>
+<text x="1370" y="470" font-size="13" text-anchor="middle" fill="#222" font-weight="bold" >Termo eléctrico</text>
+<text x="1370" y="486" font-size="10" text-anchor="middle" fill="#555" font-weight="normal" >(carga resistiva)</text>
+<path d="M1410,860 L1410,805" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="1398" y="775" width="24" height="30" rx="3" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1410" y="795" font-size="12" text-anchor="middle" fill="#222" font-weight="bold" >T</text>
+<text x="1392" y="794" font-size="10" text-anchor="end" fill="#555" font-weight="normal" >termostato</text>
+<path d="M1410,775 L1410,745" stroke="#8b4513" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M1410,745 L1400,735 L1392,755 L1384,735 L1376,755 L1368,735 L1360,755 L1352,735 L1344,755 L1336,735 L1330,745" stroke="#c0392b" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="1370" y="724" font-size="10" text-anchor="middle" fill="#555" font-weight="normal" >resistencia</text>
+<path d="M1330,745 L1330,860" stroke="#1f5fbf" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M1370,860 L1370,840" stroke="#2e8b3a" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M1360,840 L1380,840 M1363,835 L1377,835" stroke="#2e8b3a" stroke-width="2"/>
+<circle cx="1330" cy="860" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1330" y="878" font-size="1" text-anchor="start" fill="#222" font-weight="normal" ></text>
+<circle cx="1370" cy="860" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1370" y="878" font-size="1" text-anchor="start" fill="#222" font-weight="normal" ></text>
+<circle cx="1410" cy="860" r="5" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="1410" y="850" font-size="1" text-anchor="start" fill="#222" font-weight="normal" ></text>
+<text x="1318" y="856" font-size="10" text-anchor="end" fill="#222" font-weight="bold" >N</text>
+<text x="1382" y="852" font-size="10" text-anchor="start" fill="#222" font-weight="bold" >PE</text>
+<text x="1422" y="856" font-size="10" text-anchor="start" fill="#222" font-weight="bold" >L</text>
+<path d="M760,520 L1000,520" stroke="#b8960b" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M760,600 L1000,600" stroke="#b8960b" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M760,640 L790,640" stroke="#ef8a17" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="796" y="644" font-size="11" text-anchor="start" fill="#ef8a17" font-weight="bold" >3V3</text>
+<circle cx="880" cy="520" r="4.5" fill="#b8960b"/>
+<path d="M880,520 L880,528" stroke="#ef8a17" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="874" y="528" width="12" height="24" rx="2" fill="#fff" stroke="#444" stroke-width="2"/>
+<path d="M880,552 L880,560" stroke="#ef8a17" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="880" y="572" font-size="10" text-anchor="middle" fill="#ef8a17" font-weight="bold" >3V3</text>
+<text x="892" y="545" font-size="10" text-anchor="start" fill="#444" font-weight="normal" >4,7 kΩ</text>
+<circle cx="880" cy="600" r="4.5" fill="#b8960b"/>
+<path d="M880,600 L880,608" stroke="#ef8a17" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="874" y="608" width="12" height="24" rx="2" fill="#fff" stroke="#444" stroke-width="2"/>
+<path d="M880,632 L880,640" stroke="#ef8a17" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="880" y="652" font-size="10" text-anchor="middle" fill="#ef8a17" font-weight="bold" >3V3</text>
+<text x="892" y="625" font-size="10" text-anchor="start" fill="#444" font-weight="normal" >4,7 kΩ</text>
+<rect x="1000" y="510" width="30" height="50" rx="3" fill="#3d8b5a" stroke="#1b4332" stroke-width="1.5"/>
+<text x="1015" y="506" font-size="10" text-anchor="middle" fill="#555" font-weight="bold" >J1</text>
+<path d="M1000,535 L978,535" stroke="#ef8a17" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="974" y="539" font-size="9" text-anchor="end" fill="#ef8a17" font-weight="bold" >3V3</text>
+<path d="M1000,550 L978,550" stroke="#222222" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="974" y="554" font-size="9" text-anchor="end" fill="#222222" font-weight="bold" >GND</text>
+<circle cx="1000" cy="520" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="1000" cy="535" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="1000" cy="550" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<rect x="1000" y="590" width="30" height="50" rx="3" fill="#3d8b5a" stroke="#1b4332" stroke-width="1.5"/>
+<text x="1015" y="586" font-size="10" text-anchor="middle" fill="#555" font-weight="bold" >J2</text>
+<path d="M1000,615 L978,615" stroke="#ef8a17" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="974" y="619" font-size="9" text-anchor="end" fill="#ef8a17" font-weight="bold" >3V3</text>
+<path d="M1000,630 L978,630" stroke="#222222" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="974" y="634" font-size="9" text-anchor="end" fill="#222222" font-weight="bold" >GND</text>
+<circle cx="1000" cy="600" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="1000" cy="615" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<circle cx="1000" cy="630" r="5" fill="#fff" stroke="#1b4332" stroke-width="2"/>
+<path d="M1030,535 L1108,535 L1108,278" stroke="#fff" stroke-width="11" fill="none" stroke-linejoin="round"/>
+<path d="M1030,535 L1108,535 L1108,278" stroke="#6b6b6b" stroke-width="6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1103" y="236" width="10" height="42" rx="4" fill="#d9d9d9" stroke="#666" stroke-width="1.5"/>
+<text x="1096" y="262" font-size="10" text-anchor="end" fill="#333" font-weight="bold" >sonda SSR</text>
+<path d="M1030,615 L1262,615" stroke="#fff" stroke-width="11" fill="none" stroke-linejoin="round"/>
+<path d="M1030,615 L1262,615" stroke="#6b6b6b" stroke-width="6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1262,603 1280,603 1280,627 1262,627" fill="#c8a14a" stroke="#7a6520" stroke-width="1.5"/>
+<rect x="1280" y="607" width="10" height="16" fill="#b08d3c" stroke="#7a6520"/>
+<rect x="1290" y="610" width="48" height="10" rx="4" fill="#d9d9d9" stroke="#666" stroke-dasharray="4 2"/>
+<text x="1150" y="598" font-size="10" text-anchor="middle" fill="#333" font-weight="bold" >sonda termo (rosca 1/2")</text>
+<text x="1069" y="660" font-size="10" text-anchor="middle" fill="#555" font-weight="normal" >Sondas DS18B20: rojo = VDD (3V3) · negro = GND · amarillo = DATA</text>
+<rect x="370" y="712" width="610" height="180" rx="8" fill="#f7faf8" stroke="#2d6a4f" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="385" y="734" font-size="12" text-anchor="start" fill="#1b4332" font-weight="bold" >Detalle de la placa de mando</text>
+<text x="395" y="839" font-size="11" text-anchor="start" fill="#7b3fa0" font-weight="bold" >GPIO26</text>
+<path d="M441,835 L455,835" stroke="#7b3fa0" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="455" y="829" width="40" height="12" rx="2" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="475" y="824" font-size="10" text-anchor="middle" fill="#444" font-weight="normal" >1 kΩ</text>
+<path d="M495,835 L529,835" stroke="#7b3fa0" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="508" cy="835" r="4.5" fill="#7b3fa0"/>
+<path d="M508,835 L508,845" stroke="#7b3fa0" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="502" y="845" width="12" height="26" rx="2" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="498" y="863" font-size="10" text-anchor="end" fill="#444" font-weight="normal" >10 kΩ</text>
+<path d="M508,871 L508,878" stroke="#222222" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M508,878 L508,884 M499,884 L517,884 M502,888 L514,888 M505,892 L511,892" stroke="#222222" stroke-width="2"/>
+<circle cx="539" cy="835" r="18" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M530,824 L530,846" stroke="#222" stroke-width="3"/>
+<path d="M530,830 L547,820" stroke="#222" stroke-width="2"/>
+<path d="M530,840 L546,850" stroke="#222" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="563" y="834" font-size="10" text-anchor="start" fill="#222" font-weight="bold" >Q1</text>
+<text x="563" y="847" font-size="9" text-anchor="start" fill="#555" font-weight="normal" >2N2222 / BC337</text>
+<path d="M547,820 L547,800" stroke="#7b3fa0" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="525" y="765" width="44" height="35" rx="3" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="547" y="787" font-size="10" text-anchor="middle" fill="#222" font-weight="bold" >SSR</text>
+<path d="M547,765 L547,752" stroke="#d62728" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="547" y="748" font-size="10" text-anchor="middle" fill="#d62728" font-weight="bold" >+5V</text>
+<path d="M547,852 L547,878" stroke="#222222" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M547,878 L547,884 M538,884 L556,884 M541,888 L553,888 M544,892 L550,892" stroke="#222222" stroke-width="2"/>
+<text x="547" y="774" font-size="1" text-anchor="start" fill="#222" font-weight="normal" ></text>
+<text x="573" y="772" font-size="9" text-anchor="start" fill="#555" font-weight="normal" >3+</text>
+<text x="573" y="798" font-size="9" text-anchor="start" fill="#555" font-weight="normal" >4−</text>
+<text x="680" y="839" font-size="11" text-anchor="start" fill="#138a8a" font-weight="bold" >GPIO27</text>
+<path d="M726,835 L740,835" stroke="#138a8a" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="740" y="829" width="40" height="12" rx="2" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="760" y="824" font-size="10" text-anchor="middle" fill="#444" font-weight="normal" >1 kΩ</text>
+<path d="M780,835 L814,835" stroke="#138a8a" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="793" cy="835" r="4.5" fill="#138a8a"/>
+<path d="M793,835 L793,845" stroke="#138a8a" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="787" y="845" width="12" height="26" rx="2" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="783" y="863" font-size="10" text-anchor="end" fill="#444" font-weight="normal" >10 kΩ</text>
+<path d="M793,871 L793,878" stroke="#222222" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M793,878 L793,884 M784,884 L802,884 M787,888 L799,888 M790,892 L796,892" stroke="#222222" stroke-width="2"/>
+<circle cx="824" cy="835" r="18" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M815,824 L815,846" stroke="#222" stroke-width="3"/>
+<path d="M815,830 L832,820" stroke="#222" stroke-width="2"/>
+<path d="M815,840 L831,850" stroke="#222" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="848" y="834" font-size="10" text-anchor="start" fill="#222" font-weight="bold" >Q2</text>
+<text x="848" y="847" font-size="9" text-anchor="start" fill="#555" font-weight="normal" >2N2222 / BC337</text>
+<path d="M832,820 L832,800" stroke="#138a8a" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="810" y="765" width="44" height="35" rx="3" fill="#fff" stroke="#444" stroke-width="2"/>
+<text x="832" y="787" font-size="10" text-anchor="middle" fill="#222" font-weight="bold" >VENT.</text>
+<path d="M832,765 L832,752" stroke="#d62728" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<text x="832" y="748" font-size="10" text-anchor="middle" fill="#d62728" font-weight="bold" >+5V</text>
+<path d="M832,852 L832,878" stroke="#222222" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M832,878 L832,884 M823,884 L841,884 M826,888 L838,888 M829,892 L835,892" stroke="#222222" stroke-width="2"/>
+<path d="M832,758 L885,758 L885,774" stroke="#d62728" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="832" cy="758" r="4.5" fill="#d62728"/>
+<path d="M877,774 L893,774" stroke="#222" stroke-width="2.5"/>
+<polygon points="877,790 893,790 885,775" fill="#222"/>
+<path d="M885,790 L885,808 L832,808" stroke="#138a8a" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="832" cy="808" r="4.5" fill="#138a8a"/>
+<text x="897" y="786" font-size="9" text-anchor="start" fill="#555" font-weight="normal" >1N4148</text>
+<rect x="30" y="968" width="1460" height="96" rx="8" fill="#fafafa" stroke="#ddd"/>
+<path d="M50,993 L86,993" stroke="#8b4513" stroke-width="4" stroke-linecap="round"/>
+<text x="96" y="997" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >L (fase)</text>
+<path d="M335,993 L371,993" stroke="#1f5fbf" stroke-width="4" stroke-linecap="round"/>
+<text x="381" y="997" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >N (neutro)</text>
+<path d="M620,993 L656,993" stroke="#2e8b3a" stroke-width="4"/><path d="M620,993 L656,993" stroke="#f2d200" stroke-width="4" stroke-dasharray="8 8"/>
+<text x="666" y="997" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >PE (tierra)</text>
+<path d="M905,993 L941,993" stroke="#d62728" stroke-width="4" stroke-linecap="round"/>
+<text x="951" y="997" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >+5 V</text>
+<path d="M1190,993 L1226,993" stroke="#ef8a17" stroke-width="4" stroke-linecap="round"/>
+<text x="1236" y="997" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >3,3 V</text>
+<path d="M50,1019 L86,1019" stroke="#222222" stroke-width="4" stroke-linecap="round"/>
+<text x="96" y="1023" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >GND</text>
+<path d="M335,1019 L371,1019" stroke="#7b3fa0" stroke-width="4" stroke-linecap="round"/>
+<text x="381" y="1023" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >mando SSR</text>
+<path d="M620,1019 L656,1019" stroke="#138a8a" stroke-width="4" stroke-linecap="round"/>
+<text x="666" y="1023" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >mando ventilador</text>
+<path d="M905,1019 L941,1019" stroke="#b8960b" stroke-width="4" stroke-linecap="round"/>
+<text x="951" y="1023" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >datos 1-Wire</text>
+<path d="M1190,1019 L1226,1019" stroke="#6b6b6b" stroke-width="6" stroke-linecap="round"/>
+<text x="1236" y="1023" font-size="12" text-anchor="start" fill="#222" font-weight="normal" >cable de sonda</text>
+<text x="50" y="1052" font-size="11" text-anchor="start" fill="#444" font-weight="normal" >Todas las masas (GND) son comunes. Los textos «3V3»/«GND» junto a un conductor indican conexión a esa red. El SSR va siempre sobre disipador; el ventilador sopla sobre él.</text>
+</svg>

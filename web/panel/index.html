@@ -8,11 +8,34 @@
     <script src="/panel/panel.js" defer></script>
   </head>
   <body>
-    <h1>SimpleDS</h1>
+    <div class="header">
+      <h1>SimpleDS</h1>
+      <button type="button" id="logout" class="link" hidden>Cerrar sesión</button>
+    </div>
     <p id="error" class="error" hidden>No se puede contactar con el dispositivo.</p>
 
     <section class="card">
-      <h2>Estado</h2>
+      <h2>Derivación</h2>
+      <dl>
+        <dt>Estado</dt>
+        <dd id="state">—</dd>
+        <dt>Potencia aplicada</dt>
+        <dd id="output">—</dd>
+        <dt>Orden recibida</dt>
+        <dd id="command">—</dd>
+        <dt>Temperatura del SSR</dt>
+        <dd id="ssr-temperature">—</dd>
+        <dt>Temperatura del termo</dt>
+        <dd id="tank-temperature">—</dd>
+        <dt>Ventilador</dt>
+        <dd id="fan">—</dd>
+        <dt>MQTT</dt>
+        <dd id="mqtt">—</dd>
+      </dl>
+    </section>
+
+    <section class="card">
+      <h2>Dispositivo</h2>
       <dl>
         <dt>Red WiFi</dt>
         <dd id="ssid">—</dd>
@@ -27,6 +50,114 @@
         <dt>Firmware</dt>
         <dd id="firmware">—</dd>
       </dl>
+    </section>
+
+    <section class="card">
+      <h2>Protección y sondas</h2>
+      <form id="control-form">
+        <h3>SSR</h3>
+        <div class="pair">
+          <div>
+            <label for="ssrTripC">Emergencia a (°C)</label>
+            <input type="number" id="ssrTripC" name="ssrTripC" min="20" max="100" step="0.5" required />
+          </div>
+          <div>
+            <label for="ssrResetC">Rearme a (°C)</label>
+            <input type="number" id="ssrResetC" name="ssrResetC" min="20" max="100" step="0.5" required />
+          </div>
+        </div>
+        <p class="hint">Al alcanzar la temperatura de emergencia se corta la carga; se reanuda al bajar a la de rearme.</p>
+
+        <h3>Ventilador</h3>
+        <div class="pair">
+          <div>
+            <label for="fanOnC">Enciende a (°C)</label>
+            <input type="number" id="fanOnC" name="fanOnC" min="20" max="100" step="0.5" required />
+          </div>
+          <div>
+            <label for="fanOffC">Apaga a (°C)</label>
+            <input type="number" id="fanOffC" name="fanOffC" min="20" max="100" step="0.5" required />
+          </div>
+        </div>
+
+        <h3>Tiempos</h3>
+        <div class="pair">
+          <div>
+            <label for="telemetryIntervalS">Publicar temperaturas cada (s)</label>
+            <input type="number" id="telemetryIntervalS" name="telemetryIntervalS" min="5" max="3600" required />
+          </div>
+          <div>
+            <label for="commandTimeoutS">La orden caduca a los (s)</label>
+            <input type="number" id="commandTimeoutS" name="commandTimeoutS" min="10" max="3600" required />
+          </div>
+        </div>
+        <p class="hint">Si no llega una orden nueva antes de que caduque la anterior, la carga se apaga.</p>
+
+        <p class="message" hidden></p>
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>MQTT</h2>
+      <form id="mqtt-form">
+        <div class="pair">
+          <div>
+            <label for="host">Servidor</label>
+            <input type="text" id="host" name="host" maxlength="64" placeholder="192.168.1.10" autocomplete="off" />
+          </div>
+          <div>
+            <label for="port">Puerto</label>
+            <input type="number" id="port" name="port" min="1" max="65535" required />
+          </div>
+        </div>
+        <p class="hint">Deja el servidor vacío para desactivar MQTT.</p>
+        <div class="pair">
+          <div>
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" maxlength="64" autocomplete="off" />
+          </div>
+          <div>
+            <label for="mqtt-password">Contraseña</label>
+            <input type="password" id="mqtt-password" name="password" maxlength="64" autocomplete="new-password" />
+          </div>
+        </div>
+        <label for="clientId">Identificador de cliente</label>
+        <input type="text" id="clientId" name="clientId" maxlength="64" required />
+
+        <h3>Topics</h3>
+        <label for="commandTopic">Orden de potencia (suscripción)</label>
+        <input type="text" id="commandTopic" name="commandTopic" maxlength="128" required />
+        <p class="hint">Número de 0 a 100 (porcentaje), sin retener.</p>
+        <label for="powerTopic">Potencia aplicada</label>
+        <input type="text" id="powerTopic" name="powerTopic" maxlength="128" required />
+        <label for="stateTopic">Estado</label>
+        <input type="text" id="stateTopic" name="stateTopic" maxlength="128" required />
+        <p class="hint">active, emergency u offline.</p>
+        <label for="ssrTemperatureTopic">Temperatura del SSR</label>
+        <input type="text" id="ssrTemperatureTopic" name="ssrTemperatureTopic" maxlength="128" required />
+        <label for="tankTemperatureTopic">Temperatura del termo</label>
+        <input type="text" id="tankTemperatureTopic" name="tankTemperatureTopic" maxlength="128" required />
+        <label for="fanTopic">Ventilador</label>
+        <input type="text" id="fanTopic" name="fanTopic" maxlength="128" required />
+
+        <p class="message" hidden></p>
+        <button type="submit">Guardar y reiniciar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Contraseña del panel</h2>
+      <p id="password-status" class="small"></p>
+      <form id="password-form">
+        <label for="new-password">Nueva contraseña</label>
+        <input type="password" id="new-password" name="password" minlength="8" maxlength="64" autocomplete="new-password" required />
+        <label for="confirm-password">Repite la contraseña</label>
+        <input type="password" id="confirm-password" minlength="8" maxlength="64" autocomplete="new-password" required />
+        <p class="message" hidden></p>
+        <button type="submit">Guardar contraseña</button>
+        <button type="button" id="remove-password" class="secondary" hidden>Quitar contraseña</button>
+      </form>
     </section>
   </body>
 </html>

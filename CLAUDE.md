@@ -2,13 +2,14 @@
 
 Guía para trabajar en este repositorio: stack, convenciones y decisiones
 técnicas de alto nivel. La arquitectura se documenta en
-[ARCHITECTURE.md](ARCHITECTURE.md); las reglas de negocio, en `BUSINESS.md`.
+[ARCHITECTURE.md](ARCHITECTURE.md); las reglas de negocio, en [BUSINESS.md](BUSINESS.md).
 
 ## Proyecto
 
 SimpleDS es el firmware de un derivador de excedentes solares para ESP32-U
-(ESP32-WROOM-32U). Lee la potencia intercambiada con la red y regula una carga
-resistiva para aprovechar el excedente fotovoltaico.
+(ESP32-WROOM-32U). Recibe por MQTT el porcentaje de potencia que decide un
+controlador externo y lo aplica a una carga resistiva con un SSR de paso por
+cero, protegiendo el SSR del sobrecalentamiento.
 
 ## Comandos
 
@@ -56,6 +57,9 @@ introduce.
 | 2026-10-05 | **Textos de la interfaz web en español** | Idioma de los usuarios; los identificadores y comentarios siguen en inglés. |
 | 2026-10-05 | **Frontend sin toolchain**: HTML, CSS y JS (ES2017+) planos en `web/`; un script de PlatformIO los comprime e incrusta | Sin Node ni dependencias; basta con `pio run`. |
 | 2026-10-05 | **Versionado SemVer** (`config::kFirmwareVersion`) y **Conventional Commits** | Estándares de la comunidad. |
+| 2026-10-05 | **MQTT con esp-mqtt de ESP-IDF** (`mqtt_client.h`), sin librerías de terceros | Viene con el framework, corre en su propia tarea y no bloquea el bucle. |
+| 2026-10-05 | **Sondas DS18B20 con `OneWire` y `DallasTemperature`** (versiones fijadas en `lib_deps`); excepción a la regla de no usar librerías de terceros | El core no incluye 1-Wire; son las librerías de referencia y reimplementar el protocolo no aporta nada. |
+| 2026-10-05 | **Tareas de ESP-IDF permitidas** (`esp_timer` en modo tarea, tarea de esp-mqtt); comunicación con el bucle solo mediante `std::atomic` | Temporización estable y red sin bloquear `loop()`; ver *Modelo de concurrencia* en `ARCHITECTURE.md`. |
 
 ## Commits
 
@@ -114,6 +118,9 @@ introduce.
 ## Hardware
 
 - MCU: ESP32-WROOM-32U, placa genérica `esp32dev` en PlatformIO.
-- La asignación de pines se centraliza en `src/config/pins.h`.
+- La asignación de pines se centraliza en `src/config/pins.h`: SSR `GPIO26`,
+  ventilador `GPIO27`, sonda del SSR `GPIO32`, sonda del termo `GPIO33`.
+- Esquema de montaje y lista de componentes: *Montaje del hardware* en
+  `ARCHITECTURE.md` (diagrama en `docs/wiring.svg`).
 - Botón BOOT (GPIO0): pulsación larga para olvidar la red WiFi. No debe estar
   pulsado al arrancar, porque entra en modo de descarga.

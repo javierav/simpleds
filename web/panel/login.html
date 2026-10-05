@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SimpleDS</title>
+    <link rel="stylesheet" href="/common/style.css" />
+    <script src="/panel/login.js" defer></script>
+  </head>
+  <body>
+    <h1>SimpleDS</h1>
+    <p>Introduce la contraseña del panel de control.</p>
+    <p id="error" class="error" hidden></p>
+    <form id="form">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" maxlength="64" autocomplete="current-password" required autofocus />
+      <button type="submit" id="submit">Entrar</button>
+    </form>
+    <p class="small">
+      ¿La has olvidado? Mantén pulsado el botón BOOT 5 segundos: se borran la red WiFi y la
+      contraseña, y el dispositivo vuelve al modo de configuración.
+    </p>
+  </body>
+</html>
