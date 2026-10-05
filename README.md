@@ -40,6 +40,8 @@ pio test -e native          # tests unitarios en el ordenador
 ```
 ├── src/          Código dependiente de Arduino/ESP32 (app, drivers, servicios)
 ├── lib/core/     Lógica de dominio portable, sin dependencias de hardware
+├── web/          Interfaz web (se incrusta en el firmware al compilar)
+├── scripts/      Scripts de compilación
 ├── test/         Tests unitarios (Unity) que se ejecutan en el ordenador
 └── platformio.ini
 ```

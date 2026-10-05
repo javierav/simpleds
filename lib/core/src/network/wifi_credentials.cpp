@@ -13,4 +13,15 @@ CredentialsError validateCredentials(const WifiCredentials& credentials) {
   return CredentialsError::kNone;
 }
 
+const char* errorCode(CredentialsError error) {
+  switch (error) {
+    case CredentialsError::kNone: return "none";
+    case CredentialsError::kSsidEmpty: return "ssid_empty";
+    case CredentialsError::kSsidTooLong: return "ssid_too_long";
+    case CredentialsError::kPasswordTooShort: return "password_too_short";
+    case CredentialsError::kPasswordTooLong: return "password_too_long";
+  }
+  return "invalid";
+}
+
 }  // namespace simpleds::core

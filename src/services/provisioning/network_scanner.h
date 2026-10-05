@@ -17,6 +17,7 @@ class NetworkScanner {
   void requestScan();
   void update();
   const std::vector<core::ScannedNetwork>& networks() const { return networks_; }
+  bool isScanning() const { return scanning_; }
 
  private:
   void finishScan(int count);

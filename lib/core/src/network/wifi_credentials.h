@@ -25,4 +25,7 @@ enum class CredentialsError {
 
 CredentialsError validateCredentials(const WifiCredentials& credentials);
 
+// Stable machine-readable code for the error, used by the web API.
+const char* errorCode(CredentialsError error);
+
 }  // namespace simpleds::core

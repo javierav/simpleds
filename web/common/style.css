@@ -1,0 +1,111 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  color: #222;
+  background: #f6f6f4;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+}
+
+p {
+  color: #555;
+}
+
+label {
+  display: block;
+  margin: 16px 0 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: #d98a00;
+  color: #fff;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+button.link {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: #0b62c4;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.error {
+  background: #fde8e8;
+  color: #9b1c1c;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.small {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.spaced {
+  margin-top: 8px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e2dc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin: 0;
+}
+
+dt {
+  color: #555;
+}
+
+dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}

@@ -54,6 +54,7 @@ introduce.
 | 2026-10-05 | **Idiomas**: documentación (`*.md`) en español; código, comentarios, ficheros de configuración y commits en inglés | Convención habitual del ecosistema; documentación en el idioma del equipo. |
 | 2026-10-05 | **Conectividad con las librerías del core** (`WiFi`, `WebServer`, `DNSServer`, `Preferences`), sin librerías de terceros como WiFiManager | Sin dependencias externas, control del bucle no bloqueante y reutilización del servidor web para el futuro panel. |
 | 2026-10-05 | **Textos de la interfaz web en español** | Idioma de los usuarios; los identificadores y comentarios siguen en inglés. |
+| 2026-10-05 | **Frontend sin toolchain**: HTML, CSS y JS (ES2017+) planos en `web/`; un script de PlatformIO los comprime e incrusta | Sin Node ni dependencias; basta con `pio run`. |
 | 2026-10-05 | **Versionado SemVer** (`config::kFirmwareVersion`) y **Conventional Commits** | Estándares de la comunidad. |
 
 ## Commits
@@ -107,6 +108,8 @@ introduce.
 - **Errores**: sin excepciones; devolver estado (`bool`, `enum class`,
   `std::optional`).
 - Compilar sin warnings en `src/` (`-Wall -Wextra`).
+- No editar `src/generated/`: se regenera en cada compilación a partir de
+  `web/`.
 
 ## Hardware
 

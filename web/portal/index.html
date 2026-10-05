@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SimpleDS</title>
+    <link rel="stylesheet" href="/common/style.css" />
+    <script src="/portal/portal.js" defer></script>
+  </head>
+  <body>
+    <h1>SimpleDS</h1>
+
+    <section id="config">
+      <p>Configura la red WiFi a la que debe conectarse el dispositivo.</p>
+      <p id="error" class="error" hidden></p>
+
+      <form id="form">
+        <label for="ssid">Red WiFi</label>
+        <select id="ssid">
+          <option>Buscando redes…</option>
+        </select>
+        <input
+          type="text"
+          id="other"
+          class="spaced"
+          maxlength="32"
+          autocomplete="off"
+          placeholder="Nombre de la red"
+          hidden
+        />
+        <p class="small"><button type="button" id="rescan" class="link">Buscar redes de nuevo</button></p>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" maxlength="63" />
+        <label class="small"><input type="checkbox" id="show-password" /> Mostrar contraseña</label>
+
+        <button type="submit" id="submit">Guardar y conectar</button>
+      </form>
+    </section>
+
+    <section id="testing" hidden>
+      <p>Probando la conexión con <strong class="target-ssid"></strong>… Puede tardar hasta 30 segundos.</p>
+      <p class="small">
+        Si tu móvil se desconecta de la red de SimpleDS durante la prueba, vuelve a conectarte a ella
+        para ver el resultado.
+      </p>
+    </section>
+
+    <section id="saved" hidden>
+      <p>
+        Conexión correcta. Configuración guardada: el dispositivo se reiniciará y se conectará a
+        <strong class="target-ssid"></strong>.
+      </p>
+      <p>Cuando vuelvas a tu red WiFi, podrás acceder al dispositivo en:</p>
+      <ul>
+        <li><strong id="hostname-url"></strong></li>
+        <li><strong id="ip-url"></strong></li>
+      </ul>
+      <p class="small">
+        La dirección <em>.local</em> no funciona en algunos móviles Android; en ese caso usa la IP. El
+        router puede cambiar la IP con el tiempo; si quieres que sea fija, resérvala en el router.
+      </p>
+    </section>
+  </body>
+</html>

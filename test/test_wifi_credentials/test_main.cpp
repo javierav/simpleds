@@ -3,6 +3,7 @@
 #include "network/wifi_credentials.h"
 
 using simpleds::core::CredentialsError;
+using simpleds::core::errorCode;
 using simpleds::core::validateCredentials;
 using simpleds::core::WifiCredentials;
 
@@ -35,6 +36,11 @@ static void test_password_length_limits() {
                    CredentialsError::kPasswordTooLong);
 }
 
+static void test_error_codes() {
+  TEST_ASSERT_EQUAL_STRING("ssid_empty", errorCode(CredentialsError::kSsidEmpty));
+  TEST_ASSERT_EQUAL_STRING("password_too_short", errorCode(CredentialsError::kPasswordTooShort));
+}
+
 int main() {
   UNITY_BEGIN();
   RUN_TEST(test_accepts_secured_network);
@@ -42,5 +48,6 @@ int main() {
   RUN_TEST(test_rejects_empty_ssid);
   RUN_TEST(test_ssid_length_limit);
   RUN_TEST(test_password_length_limits);
+  RUN_TEST(test_error_codes);
   return UNITY_END();
 }
